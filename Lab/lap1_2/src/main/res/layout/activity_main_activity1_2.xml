@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2">
+        <TableRow>
+            <TextView
+                android:text="Name"/>
+
+            <!--input area-->
+            <EditText
+                android:id="@+id/input"
+                android:hint="type your name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </TableRow>
+    </TableLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <!--leftmost button-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_clear"
+            android:padding="3dp"
+            android:text="CLEAR"
+            android:onClick="onB_ClearClicked"/>
+
+        <!--right next to clear button-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_print"
+            android:layout_toRightOf="@id/btn_clear"
+            android:padding="3dp"
+            android:text="PRINT"
+            android:onClick="onB_PrintClicked"/>
+
+        <!--below of buttons-->
+        <TextView
+            android:layout_below="@id/btn_clear"
+            android:id="@+id/printHere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="contents"/>
+    </RelativeLayout>
+</LinearLayout>
