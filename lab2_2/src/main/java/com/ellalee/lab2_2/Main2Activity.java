@@ -26,29 +26,28 @@ public class Main2Activity extends AppCompatActivity {
         button_back = findViewById(R.id.btn_back);
 
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null) {
+        if(bundle != null) { //if the bundle is not empty
             final String url = bundle.getString(URL);
 
-            if(url != null && !url.equals("")) {
-                textView.setText(url);
+            if(url.equals("")){
+                Toast.makeText(this, "주소를 다시 입력해주세요.", Toast.LENGTH_SHORT).show();
+            }
+            else if(url != null) {
+                textView.setText(url);//show the url to the screen
                 button_go.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://"+url));
-                        startActivity(intent);
+                        startActivity(intent); //move to the page with url
                     }
                 });
             }
-            else if(url.equals("")){
-                Toast.makeText(this, "주소를 다시 입력해주세요.", Toast.LENGTH_SHORT).show();
-            }
         }
-
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Main2Activity.this, "뒤로가기 버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
-                finish();
+                finish(); //discard current activity
             }
         });
     }

@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 String studentAge = age.getText().toString();
 
                 Intent intent = new Intent(getBaseContext(), Main2Activity.class);
-                intent.putExtra(Main2Activity.key_name, studentName);
-                intent.putExtra(Main2Activity.key_age, studentAge);
+                intent.putExtra(Main2Activity.key_name, studentName); //send the student name to main2activity
+                intent.putExtra(Main2Activity.key_age, studentAge); //send the student age to main2activity
                 startActivity(intent);
             }
         });

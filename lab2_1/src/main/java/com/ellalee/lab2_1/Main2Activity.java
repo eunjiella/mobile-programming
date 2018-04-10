@@ -17,7 +17,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null) {
+        if(bundle != null) { //if bundle is not empty
             String name = bundle.getString(key_name);
             String age = bundle.getString(key_age);
 
@@ -28,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                finish(); //discard current activity
             }
         });
     }
