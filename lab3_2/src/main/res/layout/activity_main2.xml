@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.ellalee.lab3_2.Main2Activity"
+    android:stretchColumns="2">
+
+    <TableRow>
+        <TextView android:text="성명"/>
+        <TextView android:id="@+id/txtName"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="성별"/>
+        <TextView android:id="@+id/txtGender"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="수신여부"/>
+        <TextView android:id="@+id/txtContact"/>
+    </TableRow>
+
+    <TableRow>
+        <Button android:id="@+id/btnBack"
+            android:text="이전"
+            android:layout_column="2"
+            android:layout_gravity="right"/>
+    </TableRow>
+</TableLayout>
+
+
