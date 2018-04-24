@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
+
+    <TableRow>
+
+        <TextView android:text="성명" />
+        <EditText android:id="@+id/editName"/>
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="성별" />
+
+        <RadioGroup android:orientation="horizontal"
+            android:id="@+id/radGender">
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여" />
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남" />
+        </RadioGroup>
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:text="수신여부" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/chkSMS"
+                android:text="SMS" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEmail"
+                android:layout_column="2"
+                android:text="e-mail" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAssign"
+            android:layout_column="1"
+            android:text="등록"
+            android:layout_gravity="right"
+            />
+
+    </TableRow>
+
+</TableLayout>
