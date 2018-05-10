@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHANGE IMAGE"
+        android:layout_gravity="center"
+        android:onClick="onButtonClicked"
+        android:id="@+id/button"/>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--initially make it visible -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nougat"
+        android:visibility="visible"
+        android:id="@+id/imageView1"
+        />
+
+    <!--initially make it invisible-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/oreo"
+        android:visibility="invisible"
+        android:id="@+id/imageView2"
+        />
+</FrameLayout>
+</LinearLayout>
